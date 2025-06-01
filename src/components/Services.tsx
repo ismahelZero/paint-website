@@ -1,63 +1,83 @@
-// src/components/Services.tsx
-import { ReactNode } from 'react'
+import React from 'react'
 import {
-  FaPenNib,
-  FaSearch,
   FaBullhorn,
-  FaMobileAlt,
-  FaPaintBrush,
-  FaEnvelopeOpen
+  FaCube,
+  FaLayerGroup,
+  FaPalette,
+  FaUser,
+  FaVideo
 } from 'react-icons/fa'
 
 type ServiceCardProps = {
-  icon: ReactNode
+  icon: React.ReactNode
   title: string
   subtitle: string
 }
 
 const ServiceCard = ({ icon, title, subtitle }: ServiceCardProps) => (
-  <div className="bg-dark p-6 rounded-lg text-center shadow-md">
-    <div className="text-3xl text-primary mb-4 mx-auto">{icon}</div>
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-gray-400 text-sm">{subtitle}</p>
+  <div className="text-center">
+    {/* Icon Container with Purple Circle */}
+    <div className="relative mx-auto mb-6 w-24 h-24">
+      {/* White rounded rectangle background */}
+      <div className="absolute inset-0 bg-white rounded-2xl"></div>
+      {/* Purple circle */}
+      <div className="absolute inset-2 bg-primary rounded-full flex items-center justify-center">
+        <div className="text-white text-4xl">{icon}</div>
+      </div>
+    </div>
+
+    {/* Title */}
+    <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
+
+    {/* Subtitle */}
+    <p className="text-gray-400 text-sm leading-relaxed">{subtitle}</p>
   </div>
 )
 
 const Services = () => {
   return (
-    <section className="bg-black text-white py-24">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">Our Services</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <section className="py-24">
+      <div className="container mx-auto px-4 text-center max-w-6xl">
+        {/* Header */}
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">Our services</h2>
+        <p className="text-gray-400 mb-16 text-lg">
+          Transforming your online presence with innovative digital strategies
+        </p>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+          {/* Top Row */}
           <ServiceCard
-            icon={<FaPenNib />}
-            title="Visual Identity"
-            subtitle="Branding & Graphic Design"
+            icon={<FaVideo />}
+            title="Video Making"
+            subtitle="Random content"
           />
           <ServiceCard
-            icon={<FaSearch />}
-            title="Research"
-            subtitle="Market & User Research"
+            icon={<FaPalette />}
+            title="Branding"
+            subtitle="Random content to fill the blank space"
           />
           <ServiceCard
             icon={<FaBullhorn />}
-            title="Marketing Strategy"
-            subtitle="Planning & Execution"
+            title="Marketing strategy"
+            subtitle="Random content to fill the blank space"
+          />
+
+          {/* Bottom Row */}
+          <ServiceCard
+            icon={<FaUser />}
+            title="Email Marketing"
+            subtitle="Random content"
           />
           <ServiceCard
-            icon={<FaMobileAlt />}
-            title="Digital Marketing"
-            subtitle="Online Ads & Social Media"
+            icon={<FaLayerGroup />}
+            title="Social Media Managing"
+            subtitle="Random content to fill the blank space"
           />
           <ServiceCard
-            icon={<FaPaintBrush />}
-            title="Content & Imaging"
-            subtitle="Photo, Video, & Design"
-          />
-          <ServiceCard
-            icon={<FaEnvelopeOpen />}
-            title="Event Hosting"
-            subtitle="Online & Onsite Events"
+            icon={<FaCube />}
+            title="Content Writing"
+            subtitle="Random content to fill the blank space"
           />
         </div>
       </div>

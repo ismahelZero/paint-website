@@ -1,69 +1,111 @@
-// src/components/NewsSection.tsx
-import Image from 'next/image'
-
-const newsItems = [
-  {
-    id: 1,
-    title: 'We incorporate the formation of plans...',
-    image: '/images/news/news1.png'
-  },
-  {
-    id: 2,
-    title: 'We provide scalable marketing...',
-    image: '/images/news/news2.png'
-  },
-  {
-    id: 3,
-    title: 'We specialize in growing brands...',
-    image: '/images/news/news3.png'
-  }
-]
+import React from 'react'
 
 const NewsSection = () => {
+  const newsItems = [
+    {
+      id: 1,
+      title:
+        'We incorporate the formation of public partnerships as a core aspect of our operations.',
+      image: '/images/news/news1.png',
+      category: 'Company',
+      subcategory: 'Contracts'
+    },
+    {
+      id: 2,
+      title:
+        'We incorporate the formation of public partnerships as a core aspect of our operations.',
+      image: '/images/news/news2.png',
+      category: 'Company',
+      subcategory: 'Contracts'
+    },
+    {
+      id: 3,
+      title:
+        'We incorporate the formation of public partnerships as a core aspect of our operations.',
+      image: '/images/news/news3.png',
+      category: 'Company',
+      subcategory: 'Contracts'
+    }
+  ]
+
   return (
-    <section className="bg-black text-white py-24">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-10">
-          <h2 className="text-3xl font-bold">News</h2>
-          <button className="bg-primary px-5 py-2 rounded-full text-sm text-white mt-4 md:mt-0">
-            View All
+    <div className="min-h-screen">
+      <div className="container mx-auto px-6 py-8">
+        {/* Header */}
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-4xl font-bold">News</h1>
+          <button className="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-full text-sm transition-colors">
+            View all news
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="md:col-span-1 bg-dark p-4 rounded-lg">
-            <Image
-              src="/images/news/main.png"
-              alt="Main News"
-              width={600}
-              height={400}
-              className="rounded-lg mb-4"
-            />
-            <p className="text-gray-300 text-sm">
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Main Featured Article */}
+          <div className="space-y-4">
+            <div className="relative overflow-hidden rounded-lg">
+              <img
+                src="/images/news/main.png"
+                alt="Business meeting"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex gap-2 mb-4">
+              <span className="bg-white text-black px-3 py-1 rounded-full text-xs">
+                Company
+              </span>
+              <span className="bg-white text-black px-3 py-1 rounded-full text-xs">
+                Contracts
+              </span>
+            </div>
+            <h2 className="text-xl font-semibold leading-relaxed">
               We specialize in fostering effective partnerships with supportive
               companies to drive mutual success.
+            </h2>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Our approach focuses on building long-term relationships with
+              supporting companies, contributing to mutual advancement,
+              development, and expansion of the sector through diverse
+              capabilities, expertise, and technological innovation.
             </p>
           </div>
-          <div className="md:col-span-2 grid grid-cols-1 gap-4">
+
+          {/* News Items List */}
+          <div className="space-y-4">
             {newsItems.map(item => (
               <div
                 key={item.id}
-                className="flex gap-4 items-center bg-dark p-3 rounded-lg"
+                className="rounded-lg px-4 pb-4 hover:bg-gray-750 transition-colors"
               >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={80}
-                  height={80}
-                  className="rounded"
-                />
-                <p className="text-gray-300 text-sm">{item.title}</p>
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <img
+                      src={item.image}
+                      alt="News thumbnail"
+                      className="object-cover rounded-lg"
+                      height={246}
+                      width={246}
+                    />
+                  </div>
+                  <div className="flex-1 space-y-3">
+                    <div className="flex gap-2"></div>
+                    <p className="text-sm text-gray-300 leading-relaxed">
+                      {item.title}
+                    </p>
+                    <span className="bg-white text-black px-2 py-1 rounded-full text-xs">
+                      {item.category}
+                    </span>
+                    <span className="bg-white text-black px-2 mx-2 py-1 rounded-full text-xs">
+                      {item.subcategory}
+                    </span>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

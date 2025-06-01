@@ -1,4 +1,4 @@
-// src/components/Partners.tsx
+'use client'
 import Image from 'next/image'
 
 const partnerLogos = [
@@ -10,18 +10,25 @@ const partnerLogos = [
 
 const Partners = () => {
   return (
-    <section className="bg-black py-16 text-center">
-      <h2 className="text-white text-xl font-semibold mb-10">Our Partners</h2>
-      <div className="flex flex-wrap justify-center items-center gap-10 px-4">
-        {partnerLogos.map((src, idx) => (
-          <Image
-            key={idx}
-            src={src}
-            alt={`Partner ${idx + 1}`}
-            width={100}
-            height={40}
-          />
-        ))}
+    <section className=" py-16 text-center">
+      <h2 className=" text-[48px] font-semibold mb-10">Our Partners</h2>
+      <div className="overflow-x-auto scrollbar-hide">
+        <div className="flex gap-6 px-4 w-max">
+          {partnerLogos.map((src, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-md shadow-md p-4 flex items-center justify-center w-[300px] h-[80px] "
+            >
+              <Image
+                src={src}
+                alt={`Partner ${idx + 1}`}
+                width={80}
+                height={40}
+                className="object-contain"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
