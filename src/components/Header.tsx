@@ -8,26 +8,36 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="bg-black text-white">
-      <div className="container mx-auto px-4 py-5 flex items-center justify-between">
-        <Link href="/home" className="text-xl font-bold">
-          <Image src="/images/logo.png" alt="Logo" width={100} height={30} />
-        </Link>
+    <header>
+      <div className="container mx-auto py-5 flex items-center justify-around">
+        <div className="relative w-[135px] h-[40px]">
+          <Image
+            src="/images/logo.png"
+            alt="Logo"
+            fill
+            className="object-cover"
+          />
+        </div>
 
         <nav className="hidden md:flex space-x-8">
           <Link href="/home">Home</Link>
+          <Link href="#">About Us</Link>
           <Link href="#">Services</Link>
-          <Link href="#">About</Link>
-          <Link href="#">News</Link>
-          <Link href="#">Pricing</Link>
+          <Link href="#">Branches</Link>
+          <Link href="#" className="relative inline-flex items-center">
+            Jobs
+            <span className="ml-1 inline-flex items-center justify-center text-xs font-bold text-white bg-primary rounded-full w-5 h-5">
+              12
+            </span>
+          </Link>
         </nav>
 
         <div className="hidden md:flex gap-4">
           <button className="border border-white px-4 py-2 rounded-full text-sm">
-            Log In
+            Contact us
           </button>
           <button className="bg-primary px-4 py-2 rounded-full text-sm text-white">
-            Sign Up
+            Join us
           </button>
         </div>
 
@@ -55,16 +65,21 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden px-4 pb-4">
           <nav className="flex flex-col gap-4 text-white">
-            <Link href="/">Home</Link>
+            <Link href="/home">Home</Link>
+            <Link href="#">About Us</Link>
             <Link href="#">Services</Link>
-            <Link href="#">About</Link>
-            <Link href="#">News</Link>
-            <Link href="#">Pricing</Link>
+            <Link href="#">Branches</Link>
+            <Link href="#" className="relative inline-flex items-center">
+              Jobs
+              <span className="ml-1 inline-flex items-center justify-center text-xs font-bold text-white bg-primary rounded-full w-5 h-5">
+                12
+              </span>
+            </Link>
             <button className="border border-white px-4 py-2 rounded-full text-sm">
-              Log In
+              Contact us
             </button>
             <button className="bg-primary px-4 py-2 rounded-full text-sm text-white">
-              Sign Up
+              Join us
             </button>
           </nav>
         </div>

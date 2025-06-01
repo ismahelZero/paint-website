@@ -5,8 +5,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#9333ea',
-        dark: '#111827'
+        primary: 'var(--color-primary)',
+        dark: 'var(--color-dark)',
+        muted: 'var(--color-muted)'
+      },
+      fontFamily: {
+        sans: ['var(--font-sans)']
       }
     }
   },

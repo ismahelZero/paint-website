@@ -6,9 +6,9 @@ import About from '@/components/About'
 import Stats from '@/components/Stats'
 import News from '@/components/News'
 import Pricing from '@/components/Pricing'
-import Contact from '@/components/Contact'
 import Header from '@/components/Header'
 import Head from 'next/head'
+import Footer from '@/components/Footer'
 
 export default function HomePage() {
   return (
@@ -26,8 +26,10 @@ export default function HomePage() {
         <News />
         <Pricing />
         <Testimonials />
-        <Contact />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   )
 }
