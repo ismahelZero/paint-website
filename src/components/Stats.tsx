@@ -31,7 +31,7 @@ const PIE_COLORS = ['#a855f7', '#f97316']
 const StatsAndCharts = () => {
   return (
     <section className="py-16 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="mx-auto">
         {/* Top Navigation Line */}
         <div className="flex items-center mb-12">
           <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
@@ -62,7 +62,7 @@ const StatsAndCharts = () => {
           </div>
 
           {/* Right Column - Stats */}
-          <div className="space-y-12">
+          <div className="space-y-12 place-self-center">
             {/* Stat 1 */}
             <div className="pt-6">
               <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
