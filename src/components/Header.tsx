@@ -10,12 +10,12 @@ const Header = () => {
   return (
     <header className="bg-black text-white">
       <div className="container mx-auto px-4 py-5 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold">
+        <Link href="/home" className="text-xl font-bold">
           <Image src="/images/logo.png" alt="Logo" width={100} height={30} />
         </Link>
 
         <nav className="hidden md:flex space-x-8">
-          <Link href="/">Home</Link>
+          <Link href="/home">Home</Link>
           <Link href="#">Services</Link>
           <Link href="#">About</Link>
           <Link href="#">News</Link>
