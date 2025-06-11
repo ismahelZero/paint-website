@@ -66,7 +66,7 @@ const StatsAndCharts = () => {
             {/* Stat 1 */}
             <div className="pt-6">
               <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
-                1,200+
+                1,400+
               </div>
               <div className="text-gray-400 text-sm">Clients</div>
             </div>
