@@ -5,6 +5,10 @@ const partnerLogos = [
   '/images/partners/hsbc.png',
   '/images/partners/bmw.png',
   '/images/partners/huawei.png',
+  '/images/partners/nasa.png',
+  '/images/partners/hsbc.png',
+  '/images/partners/bmw.png',
+  '/images/partners/huawei.png',
   '/images/partners/nasa.png'
 ]
 

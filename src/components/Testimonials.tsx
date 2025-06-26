@@ -49,6 +49,20 @@ time and headache of doing that."`,
     text: `"I am so happy with your company.
 Ever since my insurer switched to you, everything and everybody I've spoken to has been extremely, extremely pleasant, helpful, and they listen to my concerns instead of just saying okay!"`,
     avatar: '/images/testimonials/avatar2.png'
+  },
+  {
+    name: 'Brandon Cox',
+    text: `"I am so happy with your company.
+Ever since my insurer switched to you, everything and everybody I've spoken to has been extremely, extremely pleasant, helpful, and they listen to my concerns instead of just saying okay!"`,
+    avatar: '/images/testimonials/avatar2.png'
+  },
+  {
+    name: 'Jessica Green',
+    text: `"I love that model. I [used to have to]
+call all around, and I absolutely love
+that model that you could save me the
+time and headache of doing that."`,
+    avatar: '/images/testimonials/avatar1.png'
   }
 ]
 
